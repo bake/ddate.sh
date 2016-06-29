@@ -1,0 +1,53 @@
+.TH DDATE.SH 1
+.SH NAME
+ddate.sh \- a ddate-equivalent to date(1)
+.SH SYNOPSIS
+.B ddate.sh
+[\fIFORMAT\fR]
+.SH DESCRIPTION
+.B ddate.sh
+todays date in discordian time
+.SH FORMAT
+.TP
+\fB%%
+\fRa literal %
+.TP
+\fB%a
+\fRlocale's abbreviated weekday name (e.g., SM)
+.TP
+\fB%A
+\fRlocale's full weekday name (e.g., Sweetmorn)
+.TP
+\fB%b
+\fRlocale's abbreviated season name (e.g., Chs)
+.TP
+\fB%B
+\fRlocale's full season name (e.g., Chaos)
+.TP
+\fB%C
+\fRcentury; like %Y, except omit last two digits (e.g., 20)
+.TP
+\fB%d
+\fRday of season (e.g, 01)
+.TP
+\fB%u
+\fRday of week (1..5); 1 is Sweetmorn
+.TP
+\fB%m
+\fRseason (0..5)
+.TP
+\fB%y
+\fRlast two digits of year (00..99)
+.TP
+\fB%Y
+\fRyear
+.SH SEE ALSO
+.TP
+date(1)
+.SH EXAMPLES
+.nf
+$ ddate.sh +%d.%m.%Y
+34.2.3182
+
+$ ddate.sh "%A, %B %d, YOLD %Y"
+Setting Orange, Confusion 34, YOLD 3182
