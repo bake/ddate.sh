@@ -46,7 +46,7 @@ function C {
 
 # day of season (e.g, 01)
 function d {
-	echo "$d"
+	echo "$d+1" | bc
 }
 
 # day of week (1..5); 1 is Sweetmorn
