@@ -3,10 +3,10 @@
 gd=`date +%j`
 gy=`date +%Y`
 
-m=`echo "$gd / 73"| bc`
-d=`echo "($gd - 1) % 73"| bc`
-u=`echo "$d % 5"| bc`
-Y=`echo "$gy + 1166"| bc`
+m=`echo "$gd / 73" | bc`
+d=`echo "($gd - 1) % 73" | bc`
+u=`echo "$d % 5" | bc`
+Y=`echo "$gy + 1166" | bc`
 
 F=("a" "A" "b" "B" "C" "d" "m" "u" "y" "Y")
 
@@ -46,7 +46,7 @@ function C {
 
 # day of season (e.g, 01)
 function d {
-	echo "$d+1" | bc
+	echo "$d+1" | bc
 }
 
 # day of week (1..5); 1 is Sweetmorn
