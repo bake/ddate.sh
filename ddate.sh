@@ -3,38 +3,34 @@
 gd=`date +%j`
 gy=`date +%Y`
 
-m=`echo "$gd / 73" | bc`
-d=`echo "($gd - 1) % 73" | bc`
-u=`echo "$d % 5" | bc`
-Y=`echo "$gy + 1166" | bc`
+m=$((gd / 73))
+d=$(((gd - 1) % 73))
+u=$((d % 5))
+Y=$((gy + 1166))
 
 F=("a" "A" "b" "B" "C" "d" "m" "u" "y" "Y")
 
 # locale's abbreviated weekday name (e.g., SM)
 function a {
 	arr=("SM" "BT" "PD" "PP" "SO")
-
 	echo "${arr[$u]}"
 }
 
 # locale's full weekday name (e.g., Sweetmorn)
 function A {
 	arr=("Sweetmorn" "Boomtime" "Pungenday" "Prickle-Prickle" "Setting Orange")
-
 	echo "${arr[$u]}"
 }
 
 # locale's abbreviated season name (e.g., Chs)
 function b {
 	arr=("Chs" "Dsc" "Cfn" "Bcy" "Afm")
-
 	echo "${arr[m]}"
 }
 
 # locale's full season name (e.g., Chaos)
 function B {
 	arr=("Chaos" "Discord" "Confusion" "Bureaucracy" "The Aftermath")
-
 	echo "${arr[m]}"
 }
 
@@ -46,7 +42,7 @@ function C {
 
 # day of season (e.g, 01)
 function d {
-	echo "$d+1" | bc
+	echo $((d+1))
 }
 
 # day of week (1..5); 1 is Sweetmorn
