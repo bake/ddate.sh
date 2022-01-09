@@ -3,6 +3,10 @@
 gd=`date +%j`
 gy=`date +%Y`
 
+# fix bash treating some numbers as octals
+let "gd=10#${gd}"
+let "gy=10#${gy}"
+
 m=$((gd / 73))
 d=$(((gd - 1) % 73))
 u=$((d % 5))
