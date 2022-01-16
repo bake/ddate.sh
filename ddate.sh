@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-gd=`date +%j`
+gd=10#`date +%j`
 gy=`date +%Y`
 
 m=$((gd / 73))
